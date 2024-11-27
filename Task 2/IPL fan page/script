@@ -1,0 +1,51 @@
+
+let favoritePlayerVotes = { "Player 1": 0, "Player 2": 0, "Player 3": 0, "Player 4": 0 };
+let matchPredictionVotes = { "Team A": 0, "Team B": 0 };
+
+
+function submitFavoritePlayerPoll() {
+  const form = document.getElementById("favoritePlayerForm");
+  const selectedOption = form.favoritePlayer.value;
+
+  if (selectedOption) {
+    favoritePlayerVotes[selectedOption] += 1;
+    displayFavoritePlayerResults();
+
+
+    form.style.display = "none";
+    document.getElementById("favoritePlayerResults").style.display = "block";
+  } else {
+    alert("Please select a player to vote!");
+  }
+}
+
+
+function submitMatchPredictionPoll() {
+  const form = document.getElementById("matchPredictionForm");
+  const selectedOption = form.matchWinner.value;
+
+  if (selectedOption) {
+    matchPredictionVotes[selectedOption] += 1;
+    displayMatchPredictionResults();
+
+    form.style.display = "none";
+    document.getElementById("matchPredictionResults").style.display = "block";
+  } else {
+    alert("Please select a team to vote!");
+  }
+}
+
+
+function displayFavoritePlayerResults() {
+  document.getElementById("resultFavoritePlayer1").innerText = `Dhoni: ${favoritePlayerVotes["Player 1"]} votes`;
+  document.getElementById("resultFavoritePlayer2").innerText = `Jadeja2: ${favoritePlayerVotes["Player 2"]} votes`;
+  document.getElementById("resultFavoritePlayer3").innerText = `Shivam Dubey: ${favoritePlayerVotes["Player 3"]} votes`;
+  document.getElementById("resultFavoritePlayer4").innerText = `Ruturaj Gaikwad: ${favoritePlayerVotes["Player 4"]} votes`;
+}
+
+
+function displayMatchPredictionResults() 
+{
+  document.getElementById("resultTeamA").innerText = `CSK: ${matchPredictionVotes["Team A"]} votes`;
+  document.getElementById("resultTeamB").innerText = `MI: ${matchPredictionVotes["Team B"]} votes`;
+}
