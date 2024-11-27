@@ -1,0 +1,275 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color:#0275d8;
+  
+    background-image: url('csk2.jpg'); 
+    background-size: cover;  
+    background-position: center center;  
+    background-attachment:fixed;  
+    background-repeat: no-repeat;  
+    }
+
+.header {
+ 
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.header .logo {
+  height: 100px;
+  
+}
+
+.navigation a:hover {
+  color: #244e70; 
+  background-color:orangered; 
+  border-radius: 5px; 
+  padding: 0.5rem 1rem; 
+
+}
+
+.schedule-content {
+  text-align: center;
+  padding: 2rem;
+  
+}
+.schedule-upcoming{
+  display: inline-block;            
+  background-color:orange ;      
+  color:black;
+}
+
+.schedule-table {
+  width: 60%;
+  margin: auto;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.schedule-table th, .schedule-table td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.schedule-table th {
+  background-color: #0275d8;
+  color: white;
+  font-weight: bold;
+}
+
+.schedule-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.schedule-table tr:hover {
+  background-color: #d1ecf1; 
+}
+
+.players-content {
+  text-align: center;
+  padding: 2rem;
+}
+.players-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.player-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.player-card:hover {
+  transform: scale(1.05);
+}
+
+.player-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.player-card h3 {
+  color: #0275d8;
+  margin-bottom: 0.5rem;
+}
+
+.player-card p {
+  color: #555;
+  margin: 0.3rem 0;
+}
+
+.stats-content {
+  text-align: center;
+  padding: 2rem;
+}
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.stat-card {
+  background-color:#ffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 150px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.stat-card:hover {
+  transform: scale(1.05);
+}
+
+.stat-card h3 {
+  color: #0275d8;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #555;
+}
+.stats-table {
+  width: 90%;
+  margin: auto;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stats-table th, .stats-table td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.stats-table th {
+  background-color: #0275d8;
+  color: white;
+}
+
+.stats-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.stats-table tr:hover {
+  background-color: #d1ecf1; 
+}
+.footer {
+  
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.schedule-grid, .player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.schedule-item, .player-card {
+  background-color: #e9ecef;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.poll-container {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 25%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.poll-container p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.poll-container label {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.poll-container input[type="radio"] {
+  margin-right: 10px;
+}
+
+.poll-container button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.poll-container button:hover {
+  background-color: #0056b3;
+}
+
+.poll-results {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.poll-results h3 {
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.poll-results p {
+  font-size: 1rem;
+  color: #333;
+  margin: 5px 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
